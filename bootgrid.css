@@ -1,0 +1,5 @@
+﻿body {
+}
+div[class^="col-"]{
+    border:1px gray dotted;
+}
