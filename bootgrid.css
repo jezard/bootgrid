@@ -1,5 +1,8 @@
 ﻿body {
 }
-div[class^="col-"]{
+/*div[class^="col-"]{
+    border:1px gray dotted;
+}*/
+.bootgrid-col{
     border:1px gray dotted;
 }
