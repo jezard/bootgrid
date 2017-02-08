@@ -1,8 +1,11 @@
-﻿body {
+﻿.bootgrid-col{
+    border:1px gray dashed;
 }
-/*div[class^="col-"]{
-    border:1px gray dotted;
-}*/
-.bootgrid-col{
-    border:1px gray dotted;
+.editor-column-spacer{
+    display:block!important;
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABx0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNui8sowAAAAWdEVYdENyZWF0aW9uIFRpbWUAMDIvMDgvMTfLiXpEAAAASUlEQVQ4je3RsREAIQhE0S8N0H95lLAVnIGBxrrZQUjwBuaPqvo4JjORxO0unJikDTowYIEuDCCcGEA4sY7ieb2jvF/bUf4QZQKkB/D3txdi+gAAAABJRU5ErkJggg==')
+}
+.editor-column-spacer{
+    height:5px;
+    display:inline-block;
 }
