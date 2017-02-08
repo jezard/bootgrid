@@ -1,6 +1,5 @@
 tinymce.PluginManager.add('bootgrid', function (editor, url) {
     //setup
-    
     console.log(editor);
 
     //path to plugin
@@ -12,18 +11,21 @@ tinymce.PluginManager.add('bootgrid', function (editor, url) {
 
     //https://www.tinymce.com/docs/api/tinymce.dom/tinymce.dom.selection/
     editor.on('keyDown', function (e) {
-        //if a bootstrap column
-        if (tinymce.activeEditor.selection.getStart().querySelectorAll('div[class^="col-"]')) {
+        //if a bootgrid column
+        if (tinymce.activeEditor.selection.getStart()
+            .querySelectorAll('.bootgrid-col')) {
 
             el = jQuery(tinymce.activeEditor.selection.getNode());
             var s = el.text();
             //el.uniqueId();
-            if (e.keyCode == 8 || e.keyCode == 46) {//backspace
+            if (e.keyCode == 8 || e.keyCode == 46) { //backspace
                 if (s.length == 2) {
                     // Add some text when the user backspaces, and move the cursor to the end to prevent removal of the empty element.
-
-                    jQuery(el).html('<div class="editor-column-spacer" style="display:none" contentEditable="true">&nbsp;</div>Add content');
-                    $(el).prev().remove();//remove any previous sibling
+                    jQuery(el)
+                        .html('<div class="editor-column-spacer" style="display:none" contentEditable="true">&nbsp;</div>Add content');
+                    $(el)
+                        .prev()
+                        .remove(); //remove any previous sibling
 
                     tinymce.activeEditor.selection.setCursorLocation(tinymce.activeEditor.selection.getNode(), 2);
 
@@ -33,14 +35,12 @@ tinymce.PluginManager.add('bootgrid', function (editor, url) {
                 }
             }
         }
-
-       
     });
 
     /*
-    * Add a button for each row /column type required
-    */
-    
+     * Add a button for each row /column type required
+     */
+
 
     editor.addMenuItem('bootgrid-3-3-3-3', {
         image: iconpath,
@@ -48,11 +48,11 @@ tinymce.PluginManager.add('bootgrid', function (editor, url) {
         context: 'tools',
         onclick: function () {
             var html = '<div class="row">' +
-		                    '<div class="bootgrid-col col-md-3"><div class="editor-column-spacer" style="display:none" contentEditable="false">&nbsp;</div><div>Col 1</div></div>' +
-		                    '<div class="bootgrid-col col-md-3"><div class="editor-column-spacer" style="display:none" contentEditable="false">&nbsp;</div><div>Col 2</div></div>' +
-		                    '<div class="bootgrid-col col-md-3"><div class="editor-column-spacer" style="display:none" contentEditable="false">&nbsp;</div><div>Col 3</div></div>' +
-		                    '<div class="bootgrid-col col-md-3"><div class="editor-column-spacer" style="display:none" contentEditable="false">&nbsp;</div><div>Col 4</div></div>' +
-	                    '</div><p class="editor-row-spacer">&nbsp;</p>';
+                '<div class="bootgrid-col col-md-3"><div class="editor-column-spacer" style="display:none" contentEditable="false">&nbsp;</div><div>Col 1</div></div>' +
+                '<div class="bootgrid-col col-md-3"><div class="editor-column-spacer" style="display:none" contentEditable="false">&nbsp;</div><div>Col 2</div></div>' +
+                '<div class="bootgrid-col col-md-3"><div class="editor-column-spacer" style="display:none" contentEditable="false">&nbsp;</div><div>Col 3</div></div>' +
+                '<div class="bootgrid-col col-md-3"><div class="editor-column-spacer" style="display:none" contentEditable="false">&nbsp;</div><div>Col 4</div></div>' +
+                '</div><p class="editor-row-spacer">&nbsp;</p>';
             editor.insertContent(html);
         }
     });
@@ -63,9 +63,9 @@ tinymce.PluginManager.add('bootgrid', function (editor, url) {
         context: 'tools',
         onclick: function () {
             var html = '<div class="row">' +
-		                    '<div class="bootgrid-col col-md-8"><div class="editor-column-spacer" style="display:none" contentEditable="false">&nbsp;</div><div>Col 1</div></div>' +
-		                    '<div class="bootgrid-col col-md-4"><div class="editor-column-spacer" style="display:none" contentEditable="false">&nbsp;</div><div>Col 2</div></div>' +
-	                    '</div><p class="editor-row-spacer">&nbsp;</p>';
+                '<div class="bootgrid-col col-md-8"><div class="editor-column-spacer" style="display:none" contentEditable="false">&nbsp;</div><div>Col 1</div></div>' +
+                '<div class="bootgrid-col col-md-4"><div class="editor-column-spacer" style="display:none" contentEditable="false">&nbsp;</div><div>Col 2</div></div>' +
+                '</div><p class="editor-row-spacer">&nbsp;</p>';
             editor.insertContent(html);
         }
     });
@@ -76,9 +76,9 @@ tinymce.PluginManager.add('bootgrid', function (editor, url) {
         context: 'tools',
         onclick: function () {
             var html = '<div class="row">' +
-		                    '<div class="bootgrid-col col-md-4"><div class="editor-column-spacer" style="display:none" contentEditable="false">&nbsp;</div><div>Col 1</div></div>' +
-		                    '<div class="bootgrid-col col-md-8"><div class="editor-column-spacer" style="display:none" contentEditable="false">&nbsp;</div><div>Col 2</div></div>' +
-	                    '</div><p class="editor-row-spacer">&nbsp;</p>';
+                '<div class="bootgrid-col col-md-4"><div class="editor-column-spacer" style="display:none" contentEditable="false">&nbsp;</div><div>Col 1</div></div>' +
+                '<div class="bootgrid-col col-md-8"><div class="editor-column-spacer" style="display:none" contentEditable="false">&nbsp;</div><div>Col 2</div></div>' +
+                '</div><p class="editor-row-spacer">&nbsp;</p>';
             editor.insertContent(html);
         }
     });
@@ -89,9 +89,9 @@ tinymce.PluginManager.add('bootgrid', function (editor, url) {
         context: 'tools',
         onclick: function () {
             var html = '<div class="row">' +
-		                    '<div class="bootgrid-col col-md-6"><div class="editor-column-spacer" style="display:none" contentEditable="false">&nbsp;</div><div>Col 1</div></div>' +
-		                    '<div class="bootgrid-col col-md-6"><div class="editor-column-spacer" style="display:none" contentEditable="false">&nbsp;</div><div>Col 2</div></div>' +
-	                    '</div><p class="editor-row-spacer">&nbsp;</p>';
+                '<div class="bootgrid-col col-md-6"><div class="editor-column-spacer" style="display:none" contentEditable="false">&nbsp;</div><div>Col 1</div></div>' +
+                '<div class="bootgrid-col col-md-6"><div class="editor-column-spacer" style="display:none" contentEditable="false">&nbsp;</div><div>Col 2</div></div>' +
+                '</div><p class="editor-row-spacer">&nbsp;</p>';
             editor.insertContent(html);
         }
     });
@@ -102,9 +102,9 @@ tinymce.PluginManager.add('bootgrid', function (editor, url) {
         context: 'tools',
         onclick: function () {
             var html = '<div class="row">' +
-		                    '<div class="bootgrid-col col-md-3"><div class="editor-column-spacer" style="display:none" contentEditable="false">&nbsp;</div><div>Col 1</div></div>' +
-		                    '<div class="bootgrid-col col-md-9"><div class="editor-column-spacer" style="display:none" contentEditable="false">&nbsp;</div><div>Col 2</div></div>' +
-	                    '</div><p class="editor-row-spacer">&nbsp;</p>';
+                '<div class="bootgrid-col col-md-3"><div class="editor-column-spacer" style="display:none" contentEditable="false">&nbsp;</div><div>Col 1</div></div>' +
+                '<div class="bootgrid-col col-md-9"><div class="editor-column-spacer" style="display:none" contentEditable="false">&nbsp;</div><div>Col 2</div></div>' +
+                '</div><p class="editor-row-spacer">&nbsp;</p>';
             editor.insertContent(html);
         }
     });
@@ -115,9 +115,9 @@ tinymce.PluginManager.add('bootgrid', function (editor, url) {
         context: 'tools',
         onclick: function () {
             var html = '<div class="row">' +
-		                    '<div class="bootgrid-col col-md-9"><div class="editor-column-spacer" style="display:none" contentEditable="false">&nbsp;</div><div>Col 1</div></div>' +
-		                    '<div class="bootgrid-col col-md-3"><div class="editor-column-spacer" style="display:none" contentEditable="false">&nbsp;</div><div>Col 2</div></div>' +
-	                    '</div><p class="editor-row-spacer">&nbsp;</p>';
+                '<div class="bootgrid-col col-md-9"><div class="editor-column-spacer" style="display:none" contentEditable="false">&nbsp;</div><div>Col 1</div></div>' +
+                '<div class="bootgrid-col col-md-3"><div class="editor-column-spacer" style="display:none" contentEditable="false">&nbsp;</div><div>Col 2</div></div>' +
+                '</div><p class="editor-row-spacer">&nbsp;</p>';
             editor.insertContent(html);
         }
     });
@@ -128,10 +128,10 @@ tinymce.PluginManager.add('bootgrid', function (editor, url) {
         context: 'tools',
         onclick: function () {
             var html = '<div class="row">' +
-		                    '<div class="bootgrid-col col-md-4"><div class="editor-column-spacer" style="display:none" contentEditable="false">&nbsp;</div><div>Col 1</div></div>' +
-		                    '<div class="bootgrid-col col-md-4"><div class="editor-column-spacer" style="display:none" contentEditable="false">&nbsp;</div><div>Col 2</div></div>' +
-                            '<div class="bootgrid-col col-md-4"><div class="editor-column-spacer" style="display:none" contentEditable="false">&nbsp;</div><div>Col 3</div></div>' +
-	                    '</div><p class="editor-row-spacer">&nbsp;</p>';
+                '<div class="bootgrid-col col-md-4"><div class="editor-column-spacer" style="display:none" contentEditable="false">&nbsp;</div><div>Col 1</div></div>' +
+                '<div class="bootgrid-col col-md-4"><div class="editor-column-spacer" style="display:none" contentEditable="false">&nbsp;</div><div>Col 2</div></div>' +
+                '<div class="bootgrid-col col-md-4"><div class="editor-column-spacer" style="display:none" contentEditable="false">&nbsp;</div><div>Col 3</div></div>' +
+                '</div><p class="editor-row-spacer">&nbsp;</p>';
             editor.insertContent(html);
         }
     });
@@ -142,8 +142,8 @@ tinymce.PluginManager.add('bootgrid', function (editor, url) {
         context: 'tools',
         onclick: function () {
             var html = '<div class="row">' +
-		                    '<div class="bootgrid-col col-md-12"><div class="editor-column-spacer" style="display:none" contentEditable="false">&nbsp;</div><div>Col 1</div></div>' +
-	                    '</div><p class="editor-row-spacer">&nbsp;</p>';
+                '<div class="bootgrid-col col-md-12"><div class="editor-column-spacer" style="display:none" contentEditable="false">&nbsp;</div><div>Col 1</div></div>' +
+                '</div><p class="editor-row-spacer">&nbsp;</p>';
             editor.insertContent(html);
         }
     });
