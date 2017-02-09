@@ -1,11 +1,11 @@
-﻿.bootgrid-col{
+﻿div[class*="col-"]{
     border:1px gray dashed;
     -webkit-user-modify: read-write;
     -moz-user-focus: normal;
     background: #eee;
    
 }
-.bootgrid-col > div:first-child::before{
+div[class*="col-"] > div:first-child::before{
     -webkit-user-modify: read-only; 
     -moz-user-focus: ignore;
     content: " \A";
@@ -15,6 +15,6 @@
     background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABx0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNui8sowAAAAWdEVYdENyZWF0aW9uIFRpbWUAMDIvMDgvMTfLiXpEAAAASUlEQVQ4je3RsREAIQhE0S8N0H95lLAVnIGBxrrZQUjwBuaPqvo4JjORxO0unJikDTowYIEuDCCcGEA4sY7ieb2jvF/bUf4QZQKkB/D3txdi+gAAAABJRU5ErkJggg==')
 }
 
-.bootgrid-col > *{
+div[class*="col-"] > *{
     background: #fff;
 }
