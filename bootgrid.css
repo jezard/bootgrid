@@ -1,11 +1,9 @@
 ﻿div[class*="col-"]{
     border:1px gray dashed;
     -webkit-user-modify: read-write;
-    -moz-user-focus: normal;
-    background: #eee;
-   
+    -moz-user-focus: normal; 
 }
-div[class*="col-"] > *:first-child::before{
+div[class*="col-"] > *:first-child:before{
     -webkit-user-modify: read-only; 
     -moz-user-focus: ignore;
     content: " \A";
@@ -19,3 +17,12 @@ div[class*="col-"] > *{
     background: #fff;
 }
 
+.row:after{
+    content: " \A";
+    white-space: pre;
+    -webkit-user-modify: read-write;
+}
+.bootgrid-view{
+    max-width:1140px;
+    border-right: 1px dashed gray;
+}
