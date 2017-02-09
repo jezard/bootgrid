@@ -18,3 +18,4 @@ div[class*="col-"] > *:first-child::before{
 div[class*="col-"] > *{
     background: #fff;
 }
+
