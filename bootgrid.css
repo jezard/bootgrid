@@ -26,3 +26,6 @@ div[class*="col-"] > *{
     max-width:1140px;
     border-right: 1px dashed gray;
 }
+p.editor-row-spacer{
+    display:block!important;
+}

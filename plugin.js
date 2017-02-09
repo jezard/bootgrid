@@ -60,7 +60,7 @@ tinymce.PluginManager.add('bootgrid', function (editor, url) {
                 '<div class="col-sm-3 col-md-3"><div>Col 2</div></div>' +
                 '<div class="col-sm-3 col-md-3"><div>Col 3</div></div>' +
                 '<div class="col-sm-3 col-md-3"><div>Col 4</div></div>' +
-                '</div><p class="editor-row-spacer">&nbsp;</p>';
+                '</div><p class="editor-row-spacer" style="display:none">&nbsp;</p>';
             editor.insertContent(html);
         }
     });
@@ -73,7 +73,7 @@ tinymce.PluginManager.add('bootgrid', function (editor, url) {
             var html = '<div class="row">' +
                 '<div class="col-sm-8 col-md-8"><div>Col 1</div></div>' +
                 '<div class="col-sm-4 col-md-4"><div>Col 2</div></div>' +
-                '</div><p class="editor-row-spacer">&nbsp;</p>';
+                '</div><p class="editor-row-spacer" style="display:none">&nbsp;</p>';
             editor.insertContent(html);
         }
     });
@@ -86,7 +86,7 @@ tinymce.PluginManager.add('bootgrid', function (editor, url) {
             var html = '<div class="row">' +
                 '<div class="col-sm-4 col-md-4"><div>Col 1</div></div>' +
                 '<div class="col-sm-8 col-md-8"><div>Col 2</div></div>' +
-                '</div><p class="editor-row-spacer">&nbsp;</p>';
+                '</div><p class="editor-row-spacer" style="display:none">&nbsp;</p>';
             editor.insertContent(html);
         }
     });
@@ -99,7 +99,7 @@ tinymce.PluginManager.add('bootgrid', function (editor, url) {
             var html = '<div class="row">' +
                 '<div class="col-sm-6 col-md-6"><div>Col 1</div></div>' +
                 '<div class="col-sm-6 col-md-6"><div>Col 2</div></div>' +
-                '</div><p class="editor-row-spacer">&nbsp;</p>';
+                '</div><p class="editor-row-spacer" style="display:none">&nbsp;</p>';
             editor.insertContent(html);
         }
     });
@@ -112,7 +112,7 @@ tinymce.PluginManager.add('bootgrid', function (editor, url) {
             var html = '<div class="row">' +
                 '<div class="col-sm-3 col-md-3"><div>Col 1</div></div>' +
                 '<div class="col-sm-9 col-md-9"><div>Col 2</div></div>' +
-                '</div><p class="editor-row-spacer">&nbsp;</p>';
+                '</div><p class="editor-row-spacer" style="display:none">&nbsp;</p>';
             editor.insertContent(html);
         }
     });
@@ -125,7 +125,7 @@ tinymce.PluginManager.add('bootgrid', function (editor, url) {
             var html = '<div class="row">' +
                 '<div class="col-sm-9 col-md-9"><div>Col 1</div></div>' +
                 '<div class="col-sm-3 col-md-3"><div>Col 2</div></div>' +
-                '</div><p class="editor-row-spacer">&nbsp;</p>';
+                '</div><p class="editor-row-spacer" style="display:none">&nbsp;</p>';
             editor.insertContent(html);
         }
     });
@@ -139,7 +139,7 @@ tinymce.PluginManager.add('bootgrid', function (editor, url) {
                 '<div class="col-sm-4 col-md-4"><div>Col 1</div></div>' +
                 '<div class="col-sm-4 col-md-4"><div>Col 2</div></div>' +
                 '<div class="col-sm-4 col-md-4"><div>Col 3</div></div>' +
-                '</div><p class="editor-row-spacer">&nbsp;</p>';
+                '</div><p class="editor-row-spacer" style="display:none">&nbsp;</p>';
             editor.insertContent(html);
         }
     });
@@ -151,7 +151,7 @@ tinymce.PluginManager.add('bootgrid', function (editor, url) {
         onclick: function () {
             var html = '<div class="row">' +
                 '<div class="col-sm-12 col-md-12"><div>Col 1</div></div>' +
-                '</div><p class="editor-row-spacer">&nbsp;</p>';
+                '</div><p class="editor-row-spacer" style="display:none">&nbsp;</p>';
             editor.insertContent(html);
         }
     });
