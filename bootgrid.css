@@ -5,7 +5,7 @@
     background: #eee;
    
 }
-div[class*="col-"] > div:first-child::before{
+div[class*="col-"] > *:first-child::before{
     -webkit-user-modify: read-only; 
     -moz-user-focus: ignore;
     content: " \A";
