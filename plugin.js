@@ -4,6 +4,7 @@ tinymce.PluginManager.add('bootgrid', function (editor, url) {
     //path to plugin
     var path = tinymce.baseURL + '/plugins/bootgrid/';
     var iconpath = path + 'bootgrid-menu-icon.png';
+    var iconpathfit = path + 'bootgrid-menu-icon-imagefit.png';
 
 
     //editor events
@@ -38,7 +39,7 @@ tinymce.PluginManager.add('bootgrid', function (editor, url) {
     });
 
     //fix for full screen on NopCommerce
-    editor.on('FullscreenStateChanged', function(e) {
+    editor.on('FullscreenStateChanged', function (e) {
         if (e.state) {
             window.parent.jQuery('div.content').css({ position: 'absolute', 'z-index': '9999' });
         } else {
@@ -155,5 +156,14 @@ tinymce.PluginManager.add('bootgrid', function (editor, url) {
             editor.insertContent(html);
         }
     });
-});
 
+    editor.addMenuItem('image-fit', {
+        image: iconpathfit,
+        text: 'Images to fit containers',
+        context: 'tools',
+        onclick: function () {
+            var html = editor.contentAreaContainer.childNodes[0].contentWindow.document;
+            jQuery(html).find('div[class*="col-"] > img, div[class*="col-"] > div > img').filter(function () { if (jQuery(this).css("position") != "absolute") return true; else return false; }).removeAttr('width').removeAttr('height').css({ width: "100%", height: "auto" });
+        }
+    });
+});

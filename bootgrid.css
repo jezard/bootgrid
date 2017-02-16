@@ -29,3 +29,7 @@ div[class*="col-"] > *{
 p.editor-row-spacer{
     display:block!important;
 }
+/*Could / should copy  this to the theme*/
+div[class*="col-"] > img, div[class*="col-"] > div > img {
+    width:100%;
+}
